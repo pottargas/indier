@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Sessions Style | Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        /* Esto hace que el scroll sea suave */
+        html { scroll-behavior: smooth; }
+        
+        body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.9) 100%);
+        }
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 1s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 flex justify-between items-center px-8 py-6 mix-blend-difference">
+        <div class="flex items-center">
+            <img src="logo.png" alt="Studio Logo" class="h-10 w-auto object-contain">
+        </div>
+        <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.3em] font-light">
+            <a href="#sesiones" class="hover:opacity-50 transition">Sesiones</a>
+            <a href="#filosofia" class="hover:opacity-50 transition">Filosofía</a>
+            <a href="#contacto" class="hover:opacity-50 transition">Contacto</a>
+        </div>
+        <div class="md:hidden">MENU</div>
+    </nav>
+
+    <section id="filosofia" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-neutral-900">
+            <img src="img/fondo-hero.jpg"
+                 class="w-full h-full object-cover opacity-60" alt="Hero Background">
+        </div>
+        <div class="absolute inset-0 hero-gradient"></div>
+        
+        <div class="relative z-10 text-center px-4">
+            <span class="block mb-4 text-[10px] tracking-[0.5em] uppercase font-light">Nosotros</span>
+            <h1 class="serif text-5xl md:text-8xl italic mb-6">Más alla de la inspiración.</h1>
+            <p class="max-w-xl mx-auto text-sm md:text-base text-neutral-300 font-light leading-relaxed">
+                Un espacio dedicado a la creación audiovisual, donde se respira un aire independiente.
+            </p>
+            <button class="mt-12 px-10 py-4 border border-white/30 text-[10px] uppercase tracking-[0.4em] hover:bg-white hover:text-black transition-all duration-500">
+                Ver Ahora —>
+            </button>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-30 text-xs tracking-widest">
+            ↓
+        </div>
+    </section>
+
+    <section class="py-32 px-8 md:px-20 max-w-6xl mx-auto reveal" id="intro">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <h2 class="serif text-4xl md:text-6xl leading-tight">Más allá de la producción.</h2>
+            <div class="space-y-6 text-neutral-400 font-light leading-loose text-lg">
+                <p>Creemos en la importancia de capturar la esencia cruda de la música. Nuestras creaciones no son solo grabaciones, son experiencias visuales diseñadas para perdurar.</p>
+                <p class="text-white font-medium italic">Componer + Colaborar + Compartir</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sesiones" class="px-4 py-20 bg-neutral-950">
+        <div class="grid md:grid-cols-3 gap-1">
+            <div class="group relative aspect-[3/4] overflow-hidden bg-neutral-800">
+                <img src="https://scontent.fcen4-1.fna.fbcdn.net/v/t51.82787-15/660687071_18071190731394045_2253154834401131080_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=13d280&_nc_ohc=YnEl-LV_0tgQ7kNvwGm4Dab&_nc_oc=AdqGWgA734m19ZIbyfVY33Z22j54r1o_Zb-ktWU8KOZNBhjQfTjiuU_R6BiyDKTkPOsPTuqe4Pj1yfjnZVcwzzPG&_nc_zt=23&_nc_ht=scontent.fcen4-1.fna&_nc_gid=QtQ-yoLlgLCn_TuIweTeHA&_nc_ss=7b2a8&oh=00_Af1MFexteVMg4iCsm8Oz2kkD0N6MJ1Ew3ebD5gS37OQYVw&oe=69F2311F"
+                     class="w-full h-full object-cover transition duration-700 group-hover:scale-120 opacity-70" alt="Session">
+                <div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black/80 to-transparent">
+                    <p class="text-[10px] tracking-widest uppercase mb-2">En crudo</p>
+                    <h3 class="serif text-2xl italic">Sesiones en vivo</h3>
+                    <p class="text-xs text-neutral-400 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Ver proyecto —></p>
+                </div>
+            </div>
+            <div class="group relative aspect-[3/4] overflow-hidden bg-neutral-800">
+                <img src="https://scontent.fcen4-1.fna.fbcdn.net/v/t51.82787-15/655979113_18062261219394045_1999897981267697886_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_ohc=aNcoHPWMXeAQ7kNvwEU2XDE&_nc_oc=AdoR7dZBqw2rxDUIXhbYuffEXJmYXQDySl_d4pMwypBFyoa49a0GrMBP_N7ZpFX7mdWzGgGQQLyDgqj25iFh-Spv&_nc_zt=23&_nc_ht=scontent.fcen4-1.fna&_nc_gid=dOd3WSlyOtfjgnk25p8TrA&oh=00_Af074krzx-ElFxhVlsF3Ky8zmoMv1KfIeV6f2r10p0rkRg&oe=69F21665" 
+                     class="w-full h-full object-cover transition duration-700 group-hover:scale-110 opacity-70" alt="Session">
+                <div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black/80 to-transparent">
+                    <p class="text-[10px] tracking-widest uppercase mb-2">Oficial</p>
+                    <h3 class="serif text-2xl italic">Videoclip</h3>
+                    <p class="text-xs text-neutral-400 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Ver proyecto —></p>
+                </div>
+            </div>
+            <div class="group relative aspect-[3/4] overflow-hidden bg-neutral-800">
+                <img src="https://scontent.fcen4-1.fna.fbcdn.net/v/t51.82787-15/655206272_18062659538394045_6852114703054968542_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=13d280&_nc_ohc=bP5V4iMfplsQ7kNvwHOnuxw&_nc_oc=Adr1SQr7JF_o8rUC8yFwi2Rs8I-Kw1-nISI4_OZuEYXMHsu9cyAPHofSaBzJWEbFUWy1tDA7q13uzMdziNqfjBMV&_nc_zt=23&_nc_ht=scontent.fcen4-1.fna&_nc_gid=mSuHYTJ_PZK0N_MHcAKWow&_nc_ss=7b2a8&oh=00_Af19VMQTwxGi3RsgHEi-gg0T4NvR45KeJIBWZMapqRKROQ&oe=69F20D18" 
+                     class="w-full h-full object-cover transition duration-700 group-hover:scale-110 opacity-70" alt="Session">
+                <div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black/80 to-transparent">
+                    <p class="text-[10px] tracking-widest uppercase mb-2">Indier</p>
+                    <h3 class="serif text-2xl italic">En el estudio</h3>
+                    <p class="text-xs text-neutral-400 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Ver proyecto —></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="py-32 px-8 text-center bg-black border-t border-neutral-900">
+        <h2 class="serif text-4xl mb-12 italic">Creemos algo juntos.</h2>
+        <a href="mailto:hola@tustudio.com" class="text-[10px] uppercase tracking-[0.5em] border-b border-white/20 pb-4 hover:border-white transition">
+            Contacto —>
+        </a>
+        <div class="mt-32 flex justify-center space-x-8 text-[10px] tracking-widest text-neutral-500 uppercase">
+            <a href="www.youtube.com/indier" target="_blank">Youtube</a>
+            <a href="www.instagram.com/indierstudio" target="_blank">Instagram</a>
+            <a href="www.facebook.com/indierstudio" target="_blank">Facebook</a>
+        </div>
+        <p class="mt-12 text-[9px] text-neutral-700 tracking-widest uppercase">©2026 Indier studio - Navojoa,Son. México</p>
+    </footer>
+
+    <script>
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
